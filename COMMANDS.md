@@ -176,7 +176,34 @@ Unterpunkt mit eigener Beschriftung
 
 
 ## Beispiel
-### 1 -  Einfache Aufzählung
+### 1 - Einfache Aufzählungen
+
+**Erster Eintrag** Foo
+**Zweiter Eintrag** Bar
+
+    \begin{description}
+        \item[Erster Eintrag] Foo
+        \item[Zweiter Eintrag] Bar
+    \end{description}
+
+* Erster Punkt
+* Zweiter Punkt
+
+        \begin{itemize}
+            \item{Erster Punkt}
+            \item{Zweiter Punkt}
+        \end{itemize}
+        
+1. Erstens
+2. Zweitens
+
+        \begin{enumerate}
+            \item{Erstens}
+            \item{Zweitens}
+        \end{enumerate}
+
+
+### 2 - Verschachtelte Aufzählung
     \begin{itemize}
         \item erstes
         \item zweites
@@ -189,7 +216,7 @@ Unterpunkt mit eigener Beschriftung
         \end{itemize}
     \end{itemize}
 
-### 2 - Aufzählung später fortsetzen
+### 3 - Aufzählung später fortsetzen
     \begin{enumerate}
         \item Eins.
         \item Zwei.
@@ -266,6 +293,24 @@ Zeilenummer
 ### 2 - Horizontal und Vertikal ausgerichtet 
 
     \newcolumntype{C}{>{\centering\arraybackslash}p{5cm}} 
+
+### 3 - Tabelle inklusive Rahmen
+![Tabelle](img/tabelle.png)
+
+    \begin{table}
+        \caption{Geile Tabelle}
+        \begin{center}
+            \begin{tabular}{| p{2cm} | p{2cm} | p{2cm} |}
+                \hline
+                1 & 2 & 3 \\
+                \hline
+                4 & FooBar & 6 \\
+                \hline
+                7 & 8 & 9 \\
+                \hline
+                \end{tabular}
+        \end{center}
+    \end{table}
 
 # Querverweise
 
