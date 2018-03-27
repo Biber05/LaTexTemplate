@@ -22,4 +22,4 @@ Based on guidelines from FH Münster - Wirtschaft
 * amsmath = Mathematik - Formeln
 
 # Syntax und Beispiele
-[COMMADNS.md](examples/COMMANDS.md)
+[COMMANDS.md](examples/COMMANDS.md)
