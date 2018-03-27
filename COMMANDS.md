@@ -1,327 +1,431 @@
 # Grundlagen
-\documentclass[type]{name}
 Dokumenttyp inkl. Sprachen festlegen
 
-\begin{document} 
+    \documentclass[type]{name}
+
 Typ festlegen -> Dokument
 
-\include{file}
+    \begin{document} 
+
 Tex Datei einbinden
 
-\usepackage{german}
+    \include{file}
+
 Deutsche Umlaute
+    
+    \usepackage{german}
 
-\usepackage{utf8}
 UTF-8 mit allen Umlauten
+ 
+    \usepackage{utf8}
 
-\usepackage{array} 
 Package für Tabellenausrichtung
+ 
+    \usepackage{array} 
 
-\euro{}
 €
 
-\usepackage{bibgerm}
+    \euro{}
+
 Bibtex - Package für Zitate
 
-\usepackage{hyperref} 
+    \usepackage{bibgerm}
+
 Package für Querverweise
 
-\usepackage{makeidx}
+    \usepackage{hyperref} 
+
 Package für Stichworte
 
-\usepackage{amsmath, amsthm, amssymb}
+    \usepackage{makeidx}
+
 Packages für Formeln 
 
-\usepackage{color} 
+    \usepackage{amsmath, amsthm, amssymb}
+
 Package für Farben
 
-\usepackage{colortbl}
+    \usepackage{color} 
+
 Package für Tabellenfarben
 
-\usepackage[normalem]{ulem}
+    \usepackage{colortbl}
+
 Package für Schriftstil
 
-\usepackage{graphicx}
+    \usepackage[normalem]{ulem}
+
 Package für externe Bilder
 
-\usepackage{etex}
+    \usepackage{graphicx}
+
 Package für Größenangaben
 
+    \usepackage{etex}
+
 
 ## Beispiel
-\documentclass[a4paper, 10pt]{scrbook}
+srcreport = Einseitig -> Bachelor-Arbeiten
+
+srcbook = Doppelseitig -> Master-Arbeiten
+
+    \documentclass[a4paper, 10pt]{scrbook}
     
 # Gliederung
-\section{...}
 Absatz 1
 
-\subsection{...}
-Absatz 2
+    \section{...}
 
-\subsubsection{...}
+Absatz 2
+    
+    \subsection{...}
+
 Absatz 3
 
-\paragraph{...}
+    \subsubsection{...}
+
 Paragraph 1
 
-\subparagraph{...}
+    \paragraph{...}
+
 Paragraph 2
 
-\appendix
-Seitennummerierung mit Buchstaben
+    \subparagraph{...}
 
-\part{} \chapter{...}
+
+Seitennummerierung mit Buchstaben
+    
+    \appendix
+
+
 Kapitel für book oder report
 
-\\
+    \part{} \chapter{...}
+
 Umbruch
+    
+    \\
 
-\\[0,5cm]
 Absatz
+    
+    \\[0,5cm]
 
-\par
 Paragraph
+    
+    \par
 
-\newpage
 Neue Seite
 
-\, \: \; \!
+    \newpage
+
 Leerzeichen mit unterschiedlichen Abständen
 
-## Beispiel
-### 1 
-chapter
-	section
-		subsection
+    \, \: \; \!
 
+
+## Beispiel
+### 1 - Struktur
+    chapter
+	
+        section
+		
+            subsection
 
 # Einfache Strukturelemente
-\begin{itemsize}
 Start Aufzählung (UL)
+    
+    \begin{itemsize}
 
-\item
 Unterpunkt
+    
+    \item
 
-\end{itemsize}
+
 Ende Aufzählung
+    
+    \end{itemsize}
 
-\begin{enumerated}
+
 Start Aufzählung (OL)
 
-\end{enumerated}
-Ende Aufzählung
+    \begin{enumerated}
 
-\xdef\letzterwert{\the\value{enumi}} 
+Ende Aufzählung
+    
+    \end{enumerated}
+
 Speichern des letzten Index
 
-\setcounter{enumi}{\letzterwert}
+    \xdef\letzterwert{\the\value{enumi}} 
+
 Setzen des gespeicherten Indexes
 
-\begin{description}
+    \setcounter{enumi}{\letzterwert}
+
 Start Aufzählung (Beschriftung)
 
-\end{description}
+    \begin{description}
+    
 Ende Aufzählung (Beschriftung)
 
-\item[erster Punkt]
+    \end{description}
+
 Unterpunkt mit eigener Beschriftung
+    
+    \item[erster Punkt]
+
 
 ## Beispiel
-### 1
-\begin{itemize}
-  \item erstes
-  \item zweites
+### 1 -  Einfache Aufzählung
     \begin{itemize}
-     \item zweites erstes
-         \begin{itemize}
-            \item und so weiter
-         \end{itemize}
-     \item zweites zweites
+        \item erstes
+        \item zweites
+        \begin{itemize
+            \item zweites erstes
+            \begin{itemize}
+                \item und so weiter
+            \end{itemize}
+            \item zweites zweites
+        \end{itemize}
     \end{itemize}
-\end{itemize}
 
-### 2
-\begin{enumerate}
-     \item Eins.
-     \item Zwei.
-     \xdef\letzterwert{\the\value{enumi}}
-\end{enumerate}
+### 2 - Aufzählung später fortsetzen
+    \begin{enumerate}
+        \item Eins.
+        \item Zwei.
+        \xdef\letzterwert{\the\value{enumi}}
+    \end{enumerate}
 
-Unterbrechung.
-     
-\begin{enumerate}
-     \setcounter{enumi}{\letzterwert}
-     \item Drei
-     \item Vier
-\end{enumerate}
+    Unterbrechung.
+        
+    \begin{enumerate}
+        \setcounter{enumi}{\letzterwert}
+        \item Drei
+        \item Vier
+    \end{enumerate}
 
 # Tabellen
-\begin{tabular}{SPALTENDEFINITION}
+
 Start Tabelle
 
-\end{tabular}
+    \begin{tabular}{SPALTENDEFINITION}
+
+
 Ende Tabelle
 
-r l c
+    \end{tabular}
+
+
 Ausrichtung Spalte (rechts, links, mittig)
 
-p{6cm}
+    r l c
+
+
 Spalte mit fixer Breite (inkl. Umbruch)
 
-| &
+    p{6cm}
+
 Spaltentrennung Bsp: {l|l|l}
 
-\hline \hline\hline
+    | &
+
 Horizontale Linie - Doppelte horizontale Linie
 
-m{Breite}
+    \hline \hline\hline
+
 Felder sind vertikal zentriert 
 
-b{Breite}
+    m{Breite}
+
 Ausrichtung an Fußzeile
 
->{Dekl} 
+    b{Breite}
+
 Vor jedes Element r,l,c,m,b,p
 
-<{Dekl} 
+    >{Dekl} 
+
 Hinter jedes Element r,l,c,m,b,p
 
-\multicolumn{3}{c}{Text}
-Verbindet und zentriert Text über 3 Spalten
+    <{Dekl} 
 
-\rowno
+Verbindet und zentriert Text über 3 Spalten
+    
+    \multicolumn{3}{c}{Text}
+
 Zeilenummer
 
+    \rowno
+
 ## Beispiel
-### 1
-*{7}{c}  
-    -> 7 zentrierte Spalten
-\newcolumntype{C}{>{\centering\arraybackslash}p{5cm}} 
-    -> Horizontal und Vertikal ausgerichtet
+### 1 - Tabellen
+7 zentrierte Spalten
+    
+    *{7}{c}  
+
+### 2 - Horizontal und Vertikal ausgerichtet 
+
+    \newcolumntype{C}{>{\centering\arraybackslash}p{5cm}} 
 
 # Querverweise
-\label{marker}, \ref{marker}, \pageref{marker}
+
 Referenz zu Stelle im Text
 
-\cite[text]{key_list}
+    \label{marker}, \ref{marker}, \pageref{marker}
+
 Zitat Keylist = Quellenverzeichnis
 
-\nocite{key_list}
+    \cite[text]{key_list}
+
 Zitat taucht NUR im Quellenverzeichnis auf
 
-\bibliographystyle{gerplain}
+    \nocite{key_list}
+
 Zitationsstil -> Vor begin{document} 
 
-\bibliography{literatur.bib}
+    \bibliographystyle{gerplain}
+
 Literaturangaben werden generiert
 
-\hypersetup{pdfborder={0 0 0}}
+    \bibliography{literatur.bib}
+
 PDF verlinken
 
-\makeindex
+    \hypersetup{pdfborder={0 0 0}}
+
 Start des Indizes für Stichworte
 
-\printindex
+    \makeindex
+
 Index benutzen
 
+    \printindex
+
 # Fußnoten
-\footnote{text}
+
 Text der Fußnote
 
+    \footnote{text}
+
 # Mathematik
-$1+1=1$ 
+
 Formel in Text
 
-\[ 1+1=1 \] 
+    $1+1=1$ 
+
 Formel in Absatz
+
+    \[ 1+1=1 \] 
 
 ## Beispiele und Hilfsreiche Links
 https://de.wikipedia.org/wiki/Hilfe:TeX
+
 https://en.wikibooks.org/wiki/LaTeX/Mathematics
 
 # Aussehen
-\setlength{\parindent}{0cm}
+
 Horizontaler Einschub vor jedem Absatz
 
-\setlength{\parskip}{0.2cm}
+    \setlength{\parindent}{0cm}
+
 Vertikaler Abstand zwischen den Absätzen
 
-\textcolor{...}
+    \setlength{\parskip}{0.2cm}
+
+
 Schriftfarbe
 
-\textit
+    \textcolor{...}
+
 Kursiv
 
-\textbf
+    \textit
+
 Fett
 
-\textmd
+    \textbf
+
 Text medium
 
-\textnormal 
+    \textmd
+
 Hauptschriftart
 
-\uline{important} 
+    \textnormal 
+
 Unterstrichen
 
-\uuline{urgend} 
+    \uline{important} 
+
 Doppelt Unterstrichen
 
-\tiny \small \normalsize \large \huge
+    \uuline{urgend} 
+
 Schriftgröße
 
-\glqq{}text\grqq{}
+    \tiny \small \normalsize \large \huge
+
 Anführungszeichen unten und oben
 
-\slshape
+    \glqq{}text\grqq{}
+
 Serifenlose Schrift (Kopf und Fußzeile)
 
-## Beispiel
-Dieser \textrm{Text}
-ist ganz \textit{schön}
-komisch ... \textbf{Und}
-alle Vögel { \rmfamily
-\itshape \bfseries
-fliegen tief $:-)$ }
+    \slshape
 
+## Beispiel
 Dieser Text
 ist ganz *schön*
 komisch ... **Und**
 alle Vögel ***fliegen tief*** : −) 
 
+    Dieser \textrm{Text}
+    ist ganz \textit{schön}
+    komisch ... \textbf{Und}
+    alle Vögel { \rmfamily
+    \itshape \bfseries
+    fliegen tief $:-)$ }
+
 # Grafiken und Figures
-\includegraphics[width=5cm]{my_image}
 Bild einbinden
 
-\includegraphics[trim=0 0 2cm 0,clip,width=\textwidth]% {Kapitel08-img1}
+    \includegraphics[width=5cm]{my_image}
+
 Trimmen
 
+    \includegraphics[trim=0 0 2cm 0,clip,width=\textwidth]% {Kapitel08-img1}
+
 ## Beispiel
-\begin{figure}[h] -> h=fixieren
-\begin{center}
-\includegraphics[width=4cm]{ram.jpg}
-\caption{Random Access Memory}
-\label{ram_cover}
-\end{center}
-\end{figure}
+    \begin{figure}[h] -> h=fixieren
+        \begin{center}
+            \includegraphics[width=4cm]{ram.jpg}
+            \caption{Random Access Memory}
+            \label{ram_cover}
+        \end{center}
+    \end{figure}
 
 # Silbentrennung
-Zie\-gen\-kä\-se 
 \- manuelle Silbentrennung
 
+    Zie\-gen\-kä\-se 
+
 # Sonstiges
-\linespread{ZAHL}
 Zeilenabstand
 
-\thepage
-Seitenzahl
+    \linespread{ZAHL}
 
-\pagenumbering{arabic}
+Seitenzahl
+    
+    \thepage
+
 Seitennummerierung
 
-\today
+    \pagenumbering{arabic}
+
 Heutiges Datum
 
-\number\day.\number\month.\number\year
+    \today
+
 Tag.Monat.Jahr
 
+    \number\day.\number\month.\number\year
