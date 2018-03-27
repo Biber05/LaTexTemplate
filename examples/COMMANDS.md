@@ -295,7 +295,7 @@ Zeilenummer
     \newcolumntype{C}{>{\centering\arraybackslash}p{5cm}} 
 
 ### 3 - Tabelle inklusive Rahmen
-![Tabelle](img/tabelle.png)
+![Tabelle](../img/tabelle.png)
 
     \begin{table}
         \caption{Geile Tabelle}
@@ -442,7 +442,7 @@ Trimmen
 
 ## Beispiel
 
-![Figure](img/figure.png)
+![Figure](../img/figure.png)
 
     \begin{figure}[h] -> h=fixieren
         \begin{center}
