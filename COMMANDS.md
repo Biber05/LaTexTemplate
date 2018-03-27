@@ -441,6 +441,9 @@ Trimmen
     \includegraphics[trim=0 0 2cm 0,clip,width=\textwidth]% {Kapitel08-img1}
 
 ## Beispiel
+
+![Figure](img/figure.png)
+
     \begin{figure}[h] -> h=fixieren
         \begin{center}
             \includegraphics[width=4cm]{ram.jpg}
