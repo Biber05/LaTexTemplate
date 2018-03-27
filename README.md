@@ -21,3 +21,5 @@ Based on guidelines from FH Münster - Wirtschaft
 * amsfonts = Mathematik - Schriftart
 * amsmath = Mathematik - Formeln
 
+# Syntax und Beispiele
+[COMMADNS.md](examples/COMMANDS.md)
