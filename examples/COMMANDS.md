@@ -1,27 +1,28 @@
 # Grundlagen
+
 Dokumenttyp inkl. Sprachen festlegen
 
     \documentclass[type]{name}
 
 Typ festlegen -> Dokument
 
-    \begin{document} 
+    \begin{document}
 
 Tex Datei einbinden
 
     \include{file}
 
 Deutsche Umlaute
-    
+
     \usepackage{german}
 
 UTF-8 mit allen Umlauten
- 
+
     \usepackage{utf8}
 
 Package für Tabellenausrichtung
- 
-    \usepackage{array} 
+
+    \usepackage{array}
 
 €
 
@@ -33,19 +34,19 @@ Bibtex - Package für Zitate
 
 Package für Querverweise
 
-    \usepackage{hyperref} 
+    \usepackage{hyperref}
 
 Package für Stichworte
 
     \usepackage{makeidx}
 
-Packages für Formeln 
+Packages für Formeln
 
     \usepackage{amsmath, amsthm, amssymb}
 
 Package für Farben
 
-    \usepackage{color} 
+    \usepackage{color}
 
 Package für Tabellenfarben
 
@@ -63,21 +64,22 @@ Package für Größenangaben
 
     \usepackage{etex}
 
-
 ## Beispiel
+
 srcreport = Einseitig -> Bachelor-Arbeiten
 
 srcbook = Doppelseitig -> Master-Arbeiten
 
     \documentclass[a4paper, 10pt]{scrbook}
-    
+
 # Gliederung
+
 Absatz 1
 
     \section{...}
 
 Absatz 2
-    
+
     \subsection{...}
 
 Absatz 3
@@ -92,26 +94,24 @@ Paragraph 2
 
     \subparagraph{...}
 
-
 Seitennummerierung mit Buchstaben
-    
-    \appendix
 
+    \appendix
 
 Kapitel für book oder report
 
     \part{} \chapter{...}
 
 Umbruch
-    
+
     \\
 
 Absatz
-    
+
     \\[0,5cm]
 
 Paragraph
-    
+
     \par
 
 Neue Seite
@@ -122,27 +122,29 @@ Leerzeichen mit unterschiedlichen Abständen
 
     \, \: \; \!
 
-
 ## Beispiel
+
 ### 1 - Struktur
+
     chapter
-	
+
         section
-		
+
             subsection
 
 # Einfache Strukturelemente
+
 Start Aufzählung (UL)
-    
+
     \begin{itemsize}
 
 Unterpunkt
-    
+
     \item
 
 
 Ende Aufzählung
-    
+
     \end{itemsize}
 
 
@@ -151,12 +153,12 @@ Start Aufzählung (OL)
     \begin{enumerated}
 
 Ende Aufzählung
-    
+
     \end{enumerated}
 
 Speichern des letzten Index
 
-    \xdef\letzterwert{\the\value{enumi}} 
+    \xdef\letzterwert{\the\value{enumi}}
 
 Setzen des gespeicherten Indexes
 
@@ -165,17 +167,17 @@ Setzen des gespeicherten Indexes
 Start Aufzählung (Beschriftung)
 
     \begin{description}
-    
+
 Ende Aufzählung (Beschriftung)
 
     \end{description}
 
 Unterpunkt mit eigener Beschriftung
-    
+
     \item[erster Punkt]
 
-
 ## Beispiel
+
 ### 1 - Einfache Aufzählungen
 
 **Erster Eintrag** Foo
@@ -193,7 +195,7 @@ Unterpunkt mit eigener Beschriftung
             \item{Erster Punkt}
             \item{Zweiter Punkt}
         \end{itemize}
-        
+
 1. Erstens
 2. Zweitens
 
@@ -202,8 +204,8 @@ Unterpunkt mit eigener Beschriftung
             \item{Zweitens}
         \end{enumerate}
 
-
 ### 2 - Verschachtelte Aufzählung
+
     \begin{itemize}
         \item erstes
         \item zweites
@@ -217,6 +219,7 @@ Unterpunkt mit eigener Beschriftung
     \end{itemize}
 
 ### 3 - Aufzählung später fortsetzen
+
     \begin{enumerate}
         \item Eins.
         \item Zwei.
@@ -224,7 +227,7 @@ Unterpunkt mit eigener Beschriftung
     \end{enumerate}
 
     Unterbrechung.
-        
+
     \begin{enumerate}
         \setcounter{enumi}{\letzterwert}
         \item Drei
@@ -237,16 +240,13 @@ Start Tabelle
 
     \begin{tabular}{SPALTENDEFINITION}
 
-
 Ende Tabelle
 
     \end{tabular}
 
-
 Ausrichtung Spalte (rechts, links, mittig)
 
     r l c
-
 
 Spalte mit fixer Breite (inkl. Umbruch)
 
@@ -260,7 +260,7 @@ Horizontale Linie - Doppelte horizontale Linie
 
     \hline \hline\hline
 
-Felder sind vertikal zentriert 
+Felder sind vertikal zentriert
 
     m{Breite}
 
@@ -270,14 +270,14 @@ Ausrichtung an Fußzeile
 
 Vor jedes Element r,l,c,m,b,p
 
-    >{Dekl} 
+    >{Dekl}
 
 Hinter jedes Element r,l,c,m,b,p
 
     <{Dekl} 
 
 Verbindet und zentriert Text über 3 Spalten
-    
+
     \multicolumn{3}{c}{Text}
 
 Zeilenummer
@@ -285,16 +285,19 @@ Zeilenummer
     \rowno
 
 ## Beispiel
+
 ### 1 - Tabellen
+
 7 zentrierte Spalten
-    
-    *{7}{c}  
 
-### 2 - Horizontal und Vertikal ausgerichtet 
+    *{7}{c}
 
-    \newcolumntype{C}{>{\centering\arraybackslash}p{5cm}} 
+### 2 - Horizontal und Vertikal ausgerichtet
+
+    \newcolumntype{C}{>{\centering\arraybackslash}p{5cm}}
 
 ### 3 - Tabelle inklusive Rahmen
+
 ![Tabelle](../img/tabelle.png)
 
     \begin{table}
@@ -326,7 +329,7 @@ Zitat taucht NUR im Quellenverzeichnis auf
 
     \nocite{key_list}
 
-Zitationsstil -> Vor begin{document} 
+Zitationsstil -> Vor begin{document}
 
     \bibliographystyle{gerplain}
 
@@ -356,13 +359,14 @@ Text der Fußnote
 
 Formel in Text
 
-    $1+1=1$ 
+    $1+1=1$
 
 Formel in Absatz
 
-    \[ 1+1=1 \] 
+    \[ 1+1=1 \]
 
 ## Beispiele und Hilfsreiche Links
+
 https://de.wikipedia.org/wiki/Hilfe:TeX
 
 https://en.wikibooks.org/wiki/LaTeX/Mathematics
@@ -376,7 +380,6 @@ Horizontaler Einschub vor jedem Absatz
 Vertikaler Abstand zwischen den Absätzen
 
     \setlength{\parskip}{0.2cm}
-
 
 Schriftfarbe
 
@@ -396,15 +399,15 @@ Text medium
 
 Hauptschriftart
 
-    \textnormal 
+    \textnormal
 
 Unterstrichen
 
-    \uline{important} 
+    \uline{important}
 
 Doppelt Unterstrichen
 
-    \uuline{urgend} 
+    \uuline{urgend}
 
 Schriftgröße
 
@@ -419,10 +422,11 @@ Serifenlose Schrift (Kopf und Fußzeile)
     \slshape
 
 ## Beispiel
+
 Dieser Text
 ist ganz *schön*
 komisch ... **Und**
-alle Vögel ***fliegen tief*** : −) 
+alle Vögel ***fliegen tief*** : −)
 
     Dieser \textrm{Text}
     ist ganz \textit{schön}
@@ -432,6 +436,7 @@ alle Vögel ***fliegen tief*** : −)
     fliegen tief $:-)$ }
 
 # Grafiken und Figures
+
 Bild einbinden
 
     \includegraphics[width=5cm]{my_image}
@@ -453,17 +458,19 @@ Trimmen
     \end{figure}
 
 # Silbentrennung
+
 \- manuelle Silbentrennung
 
-    Zie\-gen\-kä\-se 
+    Zie\-gen\-kä\-se
 
 # Sonstiges
+
 Zeilenabstand
 
     \linespread{ZAHL}
 
 Seitenzahl
-    
+
     \thepage
 
 Seitennummerierung
