@@ -13,10 +13,12 @@ Based on guidelines from FH Münster - Wirtschaft
 ## Einrichtung Texmaker
 
 * Master.tex muss als Masterdatei festgelegt werden
-    Master.tex auswählen -> Optionen -> Aktuelle Datei zur Masterdatei erklären
+
+        Master.tex auswählen -> Optionen -> Aktuelle Datei zur Masterdatei erklären
 
 * Literaturangaben und Inhaltsverzeichnisse erfordern eine zusätzliche übersetzung
-    Master.tex auswählen -> Optionen -> Texmaker konfigurieren -> Reiter "Schnelles Übersetzen" -> "PdfLaTex + Biblatex + PdfLaTex (x2) + PDF anzeigen" auswählen (Punkt 2)
+    
+        Master.tex auswählen -> Optionen -> Texmaker konfigurieren -> Reiter "Schnelles Übersetzen" -> "PdfLaTex + Biblatex + PdfLaTex (x2) + PDF anzeigen" auswählen (Punkt 2)
 
 ## Syntax und Beispiele
 
