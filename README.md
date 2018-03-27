@@ -1,7 +1,6 @@
 # README LaTexTemplate
 
-LaTex Template for German Bachelor Thesis
-Based on guidelines from FH Münster - Wirtschaft
+LaTex Template für die Fachhochschule Münster - Fachbereich Wirtschaft.
 
 ## Overview
 
@@ -22,7 +21,7 @@ Based on guidelines from FH Münster - Wirtschaft
 
 ## Syntax und Beispiele
 
-[COMMADNS.md](examples/COMMANDS.md)
+[COMMANDS.md](examples/COMMANDS.md)
 
 ## Packages
 
@@ -34,7 +33,7 @@ Based on guidelines from FH Münster - Wirtschaft
 * fontenc = T1
 * graphicsx, subfig = Grafiken
 * fancyhdr = Kopf- und Fußzeile
-* lmodern
+* lmodern = Latin Schriftarten
 * color = Farben
 * amsfonts = Mathematik - Schriftart
 * amsmath = Mathematik - Formeln
