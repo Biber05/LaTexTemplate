@@ -1,5 +1,6 @@
 %Dokumentklasse
-\documentclass[a4paper,12pt]{scrreprt}
+\documentclass[a4paper,12pt]{scrreprt} % Bachelor Thesis - Einseitig
+
 \usepackage[left= 4.5cm,right = 2cm, bottom = 4 cm]{geometry}	% Layout
 \usepackage[onehalfspacing]{setspace}	% Zeilenabstand
 % ============= Packages =============
@@ -33,7 +34,6 @@
 % ============= Schriftart ================
 \renewcommand{\familydefault}{\sfdefault}	% Helvetica
 
-
 % ============= Kopf- und Fußzeile =============
 \pagestyle{fancy}
 %
@@ -52,16 +52,14 @@
 %Besondere Trennungen
 \hyphenation{De-zi-mal-tren-nung}
 
-
 % ============= Dokumentbeginn =============
-
 \begin{document}
 %Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
 \pagestyle{empty}
 
 \include{01_titel}
 
-% Beendet eine Seite und erzwingt auf den nachfolgenden Seiten die Ausgabe aller Gleitobjekte (z.B. Abbildungen), die bislang definiert, aber noch nicht ausgegeben wurden. Dieser Befehl fügt, falls nötig, eine leere Seite ein, sodaß die nächste Seite nach den Gleitobjekten eine ungerade Seitennummer hat. 
+% Gleitobjekte wie Abbildungen werden auf nächste Seite verschoben
 \cleardoubleoddpage
 
 %Inhaltsverzeichnis
