@@ -424,14 +424,14 @@ Serifenlose Schrift (Kopf und Fußzeile)
 ## Beispiel
 
 Dieser Text
-ist ganz *schön*
+ist ganz *schön*
 komisch ... **Und**
-alle Vögel ***fliegen tief*** : −)
+alle Vögel ***fliegen tief*** : −)
 
     Dieser \textrm{Text}
-    ist ganz \textit{schön}
+    ist ganz \textit{schön}
     komisch ... \textbf{Und}
-    alle Vögel { \rmfamily
+    alle Vögel { \rmfamily
     \itshape \bfseries
     fliegen tief $:-)$ }
 
@@ -461,7 +461,7 @@ Trimmen
 
 \- manuelle Silbentrennung
 
-    Zie\-gen\-kä\-se
+    Zie\-gen\-kä\-se
 
 # Sonstiges
 
@@ -484,3 +484,16 @@ Heutiges Datum
 Tag.Monat.Jahr
 
     \number\day.\number\month.\number\year
+    
+Seitenzahlen in bestimmten Kapiteln entfernen (Inhaltsverzeichnis, Anhang oder EE)
+    
+    \clearpage% oder \cleardoublepage bei twoside
+    \begingroup
+      \renewcommand*{\chapterpagestyle}{empty}
+      \pagestyle{empty}
+      
+        \bibliographystyle{apalike} 
+        \bibliography{Literatur}
+        \include{06_ee}
+      \clearpage
+    \endgroup
