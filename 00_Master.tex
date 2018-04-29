@@ -48,6 +48,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% pagestyle für gesamtes Dokument aktivieren
+\pagestyle{fancy}
+
 % ============= Package Einstellungen & Sonstiges ============= 
 %Besondere Trennungen
 \hyphenation{De-zi-mal-tren-nung}
@@ -55,27 +58,53 @@
 % ============= Dokumentbeginn =============
 \begin{document}
 %Seiten ohne Kopf- und Fußzeile sowie Seitenzahl
-\pagestyle{empty}
-
-\include{01_titel}
+\begingroup
+  \renewcommand*{\chapterpagestyle}{empty}
+  \pagestyle{empty}
+  \include{01_titel}
+  \clearpage
+\endgroup
 
 % Gleitobjekte wie Abbildungen werden auf nächste Seite verschoben
 \cleardoubleoddpage
 
+\pagenumbering{Roman}
 %Inhaltsverzeichnis
 \tableofcontents
+\newpage
 
-% pagestyle für gesamtes Dokument aktivieren
-\pagestyle{fancy}
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis} 
+\listoffigures 
+\newpage
 
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\listoftables
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \include{02_einleitung}
 
 \include{03_hauptteil}
 
+\include{04_schluss}
+
 %Literaturverzeichnis
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliographystyle{alpha}
 \bibliography{Literatur}
+\newpage
 
-\include{04_ee}
+\begin{appendix} 
+\addcontentsline{toc}{chapter}{Anhang}
+\include{05_anhang}
+\end{appendix} 
+
+\begingroup
+  \renewcommand*{\chapterpagestyle}{empty}
+  \pagestyle{empty}
+  \include{09_ee}
+  \clearpage
+\endgroup
 
 \end{document}
