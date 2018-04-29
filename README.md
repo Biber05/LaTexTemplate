@@ -1,7 +1,6 @@
 # README LaTexTemplate
 
-LaTex Template for German Bachelor Thesis
-Based on guidelines from FH Münster - Wirtschaft
+LaTex Template für die Fachhochschule Münster - Fachbereich Wirtschaft.
 
 ## Overview
 
@@ -13,14 +12,16 @@ Based on guidelines from FH Münster - Wirtschaft
 ## Einrichtung Texmaker
 
 * Master.tex muss als Masterdatei festgelegt werden
-    Master.tex auswählen -> Optionen -> Aktuelle Datei zur Masterdatei erklären
+
+        Master.tex auswählen -> Optionen -> Aktuelle Datei zur Masterdatei erklären
 
 * Literaturangaben und Inhaltsverzeichnisse erfordern eine zusätzliche übersetzung
-    Master.tex auswählen -> Optionen -> Texmaker konfigurieren -> Reiter "Schnelles Übersetzen" -> "PdfLaTex + Biblatex + PdfLaTex (x2) + PDF anzeigen" auswählen (Punkt 2)
+    
+        Master.tex auswählen -> Optionen -> Texmaker konfigurieren -> Reiter "Schnelles Übersetzen" -> "PdfLaTex + Biblatex + PdfLaTex (x2) + PDF anzeigen" auswählen (Punkt 2)
 
 ## Syntax und Beispiele
 
-[COMMADNS.md](examples/COMMANDS.md)
+[COMMANDS.md](examples/COMMANDS.md)
 
 ## Packages
 
@@ -32,7 +33,7 @@ Based on guidelines from FH Münster - Wirtschaft
 * fontenc = T1
 * graphicsx, subfig = Grafiken
 * fancyhdr = Kopf- und Fußzeile
-* lmodern
+* lmodern = Latin Schriftarten
 * color = Farben
 * amsfonts = Mathematik - Schriftart
 * amsmath = Mathematik - Formeln
