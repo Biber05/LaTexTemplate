@@ -175,6 +175,10 @@ Ende Aufzählung (Beschriftung)
 Unterpunkt mit eigener Beschriftung
 
     \item[erster Punkt]
+    
+Abstand zwischen Unterpunkten
+
+    \itemsep0pt
 
 ## Beispiel
 
