@@ -176,9 +176,11 @@ Für Abkürzungen muss das Packet *\usepackage{acronym}* hinzugefügt werden.
 ### Verwendung im Text
 
 Erstmalig *Mixed Reality (MR)*
+    
     \ac{MR}
     
 Anschließend *MR*
+    
     \acs{MR}
 
 
