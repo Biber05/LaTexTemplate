@@ -131,6 +131,48 @@ Leerzeichen mit unterschiedlichen Abständen
         section
 
             subsection
+            
+# Verzeichnisse
+
+Verzeichnisse beginnen mit Römischen Zahlen, die wie folgt eingestellt werden kann.
+
+    pagenumbering{Roman}
+   
+Nach den Verzeichnissen muss bei Seite 1 angefangen werden und mit Arabischen Zahlen gezählt werden.
+        
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+
+## Inhaltsverzeichnis
+
+    \tableofcontents
+    \newpage
+
+## Abbildungsverzeichnis
+
+    \addcontentsline{toc}{chapter}{Abbildungsverzeichnis} 
+    \listoffigures 
+    \newpage
+    
+## Tabellenverzeichnis
+
+    \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+    \listoftables
+    \newpage
+    
+## Abkürzungsverzeichnis
+
+Für Abkürzungen muss das Packet *\usepackage{acronym}* hinzugefügt werden.
+
+    \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis} 
+    \begin{acronym}[Bash]
+     \acro{MR}{Mixed Reality}
+     \acro{AR}{Augmented Reality}
+     \acro{VR}{Virtual Reality}
+     \acro{AV}{Augmented Virtuality}
+    \end{acronym}
+    \newpage
+
 
 # Einfache Strukturelemente
 
