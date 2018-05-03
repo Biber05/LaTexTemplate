@@ -172,6 +172,14 @@ Für Abkürzungen muss das Packet *\usepackage{acronym}* hinzugefügt werden.
      \acro{AV}{Augmented Virtuality}
     \end{acronym}
     \newpage
+    
+### Verwendung im Text
+
+Erstmalig *Mixed Reality (MR)*
+    \ac{MR}
+    
+Anschließend *MR*
+    \acs{MR}
 
 
 # Einfache Strukturelemente
