@@ -500,6 +500,10 @@ Bild einbinden
 Trimmen
 
     \includegraphics[trim=0 0 2cm 0,clip,width=\textwidth]% {Kapitel08-img1}
+    
+Bildunterschrift (Caption) Spacing auf eine Zeile, obwohl Text 1,5 Zeilen Spacing hat
+
+    \usepackage[font=singlespacing]{caption}
 
 ## Beispiel
 
