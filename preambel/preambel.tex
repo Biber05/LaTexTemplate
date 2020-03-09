@@ -1,0 +1,101 @@
+\setcounter{secnumdepth}{3}		% 3 Ebenen bei der Kapitelnumerierung
+
+%% Pakete -------------------------------------------------------------------------------
+\usepackage{morewrites}
+\usepackage[ngerman]{babel}		% neue deutsche Rechtschreibung
+\usepackage{upgreek}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{lmodern} 
+\usepackage{blindtext}				% Mit \blindtext wird Dummytext eingefügt
+\usepackage{mdwlist}				% kompaktere Listen mit itemize* und co
+\usepackage{graphicx}				% Grafiken
+\usepackage{epstopdf}               % epsBilder automatisch in pdfBilder konvertieren
+\usepackage{booktabs,tabularx}		% longtable und tabularx Pakete (XSpalten)
+\usepackage{tabularx}				% array
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage[T1]{fontenc}
+\usepackage{lscape}
+\usepackage{multirow}		% Mehrzeiliges in Tabellen
+\usepackage{rotating}		% Rotieren von Text & co
+\usepackage{color}			    	% Alles in Bunt und Farbe
+\usepackage{colortbl}
+\usepackage{multicol}		% Mehrzeilig
+\usepackage{amsmath}		% mathematische Formeln
+\usepackage{amsthm}		% theoremstyle
+\usepackage{amssymb}		% mathematische Symbole
+\usepackage{wrapfig}			% umflossene figures
+\usepackage{float}				% für [h!] bzw. [H] positionierung
+\usepackage{booktabs}	    % Für Excel2Latex Tabellen
+\usepackage{eurosym}		% Eurosymbol verwenden
+\usepackage{url}				% Weblinks einbinden
+\usepackage{fancybox}		% Kästen und Boxen
+\usepackage{caption}         % Erweiterte Einstellung für Beschriftungen
+\usepackage[list=true]{subcaption}
+\usepackage{array}             % erweiterte Optionen
+\usepackage{pdfpages}		% Einbinden von pdf-Dateien möglich
+\usepackage{setspace}		% lokales Ändern des Zeilenabstandes möglich
+\usepackage{acronym}		% Abkürzungen Lang- und Kurzschreibweise
+\usepackage{todonotes}		% Todo Kommentarte
+\usepackage{listings}			% Quellcode
+
+%% PDF Optionen (Verweise und co) -----------------------------------------------------------------
+\usepackage{ifxetex}
+\ifxetex
+\usepackage[babel. german=quotes]{csquotes}
+\usepackage{xltxtra}
+\usepackage{etex}
+\usepackage[dvipsnames]{pstricks}
+\usepackage{auto-pst-pdf}
+\usepackage{pdfpages}
+\usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage[pdfa, xetex, breaklinks=true]{hyperref}
+\else
+\usepackage[utf8]{inputenc}			% UTF-8 encoding
+\usepackage[babel, german=quotes]{csquotes}
+\usepackage[pdftex, raiselinks, pdfpagelabels, hypertexnames=false, pdfstartview={Fit}, breaklinks=true]{hyperref}
+
+%% Angaben für die PDF-Datei
+\hypersetup{
+	pdfauthor = {Vorname Nachname},
+	pdftitle =  {Master-Thesis},
+	pdfsubject = {Titel},
+	pdfkeywords = {Keyword1. Keyword2. ...},
+	pdfcreator = {LaTeX with hyperref package}
+}
+
+%% Kopf- und Fußzeile -----------------------------------------------------------------------------
+\usepackage[headsepline,automark,komastyle,nouppercase]{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadings % löschen der Stile
+\clearscrplain
+\ohead{\pagemark} % Neudefinition
+\ihead{\headmark}
+\cfoot{}
+\automark[section]{chapter} % Kopfzeile: [rechts]{links}
+
+%% Seitenränder -----------------------------------------------------------------------------------
+\usepackage[a4paper,left=4cm,right=2.5cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
+
+%% Absatzabstand -----------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+
+%% Literaturverzeichnis ---------------------------------------------------------------------------
+\usepackage[style=alphabetic,backend=bibtex]{biblatex}
+\addbibresource{Literatur.bib} % Bibliographie laden
+
+%% Verzeichnis für Listings
+% Listings umbenennen
+\renewcommand\lstlistingname{Algorithmus}
+\renewcommand\lstlistlistingname{Algorithmenverzeichnis}
+\def\lstlistingautorefname{Alg.} 
+
+
+% Pfad für Bilder
+\graphicspath{{assets/}}
+
+%% Appendix -------------------
+\usepackage[toc,page]{appendix}

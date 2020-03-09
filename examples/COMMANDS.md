@@ -354,7 +354,7 @@ Zeilenummer
 
 ### 3 - Tabelle inklusive Rahmen
 
-![Tabelle](../img/tabelle.png)
+![Tabelle](../assets/tabelle.png)
 
     \begin{table}
         \caption{Geile Tabelle}
@@ -507,7 +507,7 @@ Bildunterschrift (Caption) Spacing auf eine Zeile, obwohl Text 1,5 Zeilen Spacin
 
 ## Beispiel
 
-![Figure](../img/figure.png)
+![Figure](../assets/figure.png)
 
     \begin{figure}[h] -> h=fixieren
         \begin{center}

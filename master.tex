@@ -1,0 +1,47 @@
+%% --------------------------------------------------------------------
+%% Master - Aufbau Dokument
+%% --------------------------------------------------------------------
+
+\documentclass[paper=a4,oneside,BCOR=10mm,DIV=calc,pagesize=auto,bibliography=totoc,listof=totoc,numbers=noenddot,chapterprefix=on]{scrbook}
+
+%% Preambel 		 -----------------------------------------------------------------------------
+\input{preambel/preambel.tex}
+
+\begin{document}
+
+%% Titelseite 		 ---------------------------------------------------------------------------
+\input{content/01_titel.tex}
+
+%% Sperrvermerk. Eidesstattliche Erklärung. Vorwort --------------
+\input{content/09_ee.tex}
+
+%---------------------------------
+\frontmatter
+\pagestyle{scrheadings}
+\pagenumbering{Roman}
+%% Inhaltsverzeichnis		 -------------------------------------------------------------------
+\pdfbookmark[0]{Inhaltsverzeichnis}{tableofcontents}
+	\tableofcontents
+
+%% Verzeichnisse 	------------------------------------------------
+\listoffigures % Abbildungsverzeichnis
+\listoftables % Tabellenverzeichnis
+\input{defns.tex} % Abkürzungsverzeichnis
+\lstlistoflistings % Verzeichnis von Listings
+
+%% Inhalt der Arbeit 	------------------------------------------
+\mainmatter
+\input{content/02_einleitung.tex}
+\input{content/03_hauptteil.tex}
+\input{content/04_schluss.tex}
+
+%% Anhang 	-----------------------------------------------------
+\appendix
+\input{content/05_anhang.tex}
+
+%% Literatur und Quellenverzeichnis
+\printbibliography[nottype=online, title={Literaturverzeichnis}]
+\clearpage{}
+\printbibliography[heading=bibliography,title={Verzeichnis sonstiger Quellen},type=online,prefixnumbers={@}]
+
+\end{document}
